@@ -1,3 +1,2 @@
 # CppLearning
-just a test
-![Image text](https://github.com/zzuljs/CppLearning/tree/master/CppLearning/raw/master/Itachi.jpg)
+![Image text](https://github.com/zzuljs/CppLearning/master/CppLearning/raw/master/Itachi.jpg)
