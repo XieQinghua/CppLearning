@@ -1,7 +1,11 @@
 #include<iostream>
 
 using namespace std;
-
+/*
+**@Brief: Quick Sort Algorithm.
+**@param:int *a - input array of intarge.
+**@param:int low/high - the doundary of array.
+*/
 int sort(int*a, int low, int high) {
 	int key = a[low];
 	while (low < high) {
