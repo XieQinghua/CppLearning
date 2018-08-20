@@ -5,13 +5,28 @@
 #pragma once
 
 #include<iostream>
+#include<string>
 
 using namespace std;
 
 class Util {
 private:
 	int id;
-	int name;
+	string name;
+
 public:
-	virtual 
+	Util();
+	Util(int id, string name);
+	~Util();
+	void show();
+};
+
+class Tool :public Util {
+private:
+	int function;
+	string typeclass;
+public:
+	Tool();
+	~Tool();
+	void show();
 };
