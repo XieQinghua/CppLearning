@@ -10,6 +10,8 @@ using namespace std;
 
 class Util {
 private:
-
+	int id;
+	int name;
 public:
+	virtual 
 };
