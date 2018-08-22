@@ -39,3 +39,7 @@ public:
 	~Tool();
 	virtual void show();
 };
+
+class AnotherUtil {
+
+};

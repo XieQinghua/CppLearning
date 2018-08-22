@@ -84,6 +84,18 @@ void test6() {
 	Util u;
 	u.test_inline();
 }
+
+void test7() {
+	float ff = 3.1415f;
+	int i = ff;
+	cout << ff << endl;
+	int a = static_cast<int>(ff);
+	cout << a << endl;
+
+	Util*u = new Util;
+	AnotherUtil*t = static_cast<AnotherUtil>(u);
+}
+
 int main() {
 	/*Util u(1, "Hello");
 	Tool t;
@@ -99,7 +111,7 @@ int main() {
 	Util u;
 	u.get_count();
 	cout<<Util::test_count;*/
-	test6();
+	test7();
 	cin.get();
 	return 0;
 }
