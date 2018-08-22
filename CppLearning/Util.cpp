@@ -23,6 +23,9 @@ Util::Util(int id, string name) :id(id), name(name) {
 	cout << "parameter:name = " << name << endl;
 }
 
+inline void Util::test_inline2() {
+	cout << "I am a inline function in Util,define function body outside!" << endl;
+}
 Tool::Tool() {
 	cout << "Tool constructor function:Tool()" << endl;
 }

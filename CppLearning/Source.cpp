@@ -79,6 +79,11 @@ void test5() {
 	int b = 3;
 	cout << MAX(a, b) << endl;
 }
+
+void test6() {
+	Util u;
+	u.test_inline();
+}
 int main() {
 	/*Util u(1, "Hello");
 	Tool t;
@@ -94,7 +99,7 @@ int main() {
 	Util u;
 	u.get_count();
 	cout<<Util::test_count;*/
-	test5();
+	test6();
 	cin.get();
 	return 0;
 }

@@ -19,7 +19,10 @@ public:
 	Util();
 	Util(int id, string name);
 	~Util();
-
+	inline void test_inline() {
+		cout << "I am a inline function in class Util" << endl;
+	}
+	inline void test_inline2();
 	static int test_count;
 	virtual void show();
 	static void get_count() {
