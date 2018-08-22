@@ -31,6 +31,45 @@ void test2() {
 	cout << *c << endl;
 }
 
+void test3() {
+
+	Util *u = new Tool();
+	Tool *t = dynamic_cast<Tool*>(u);
+	if (t != nullptr) {
+		t->get_count();
+	}
+	else {
+		cout << "failure!" << endl;
+	}
+	if (typeid(Util) == typeid(*u)) {
+		cout << "typeid(Util) == typeid(u)" << endl;
+	}
+	else {
+		cout << "typeid(Util) != typeid(u)" << endl;
+	}
+
+	if (typeid(Tool) == typeid(*u)) {
+		cout << "typeid(Tool) == typeid(u)" << endl;
+	}
+	else {
+		cout << "typeid(Tool) != typeid(u)" << endl;
+	}
+	cout << typeid(*u).name() << endl;
+}
+
+
+void test4() {
+	int a = 10;
+	int *i = &a;
+	long pc = reinterpret_cast<long>(i);
+	char *cr = reinterpret_cast<char*>(i);
+	long *l = reinterpret_cast<long*>(i);
+	
+	cout << *i << endl;
+	cout << hex << pc << endl;
+	cout << cr << endl;
+	cout << l << endl;
+}
 int main() {
 	/*Util u(1, "Hello");
 	Tool t;
@@ -41,8 +80,12 @@ int main() {
 		//Util *uuu = new Tool();
 		//delete uuu;
 	}
-	test2();
-	
+	//test2();
+	/*
+	Util u;
+	u.get_count();
+	cout<<Util::test_count;*/
+	test4();
 	cin.get();
 	return 0;
 }

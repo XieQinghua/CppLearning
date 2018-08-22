@@ -11,6 +11,7 @@ using namespace std;
 
 class Util {
 private:
+	static int count;
 	int id;
 	string name;
 
@@ -18,7 +19,12 @@ public:
 	Util();
 	Util(int id, string name);
 	~Util();
-	void show();
+
+	static int test_count;
+	virtual void show();
+	static void get_count() {
+		cout << count << endl;
+	}
 };
 
 class Tool :public Util {
@@ -28,5 +34,5 @@ private:
 public:
 	Tool();
 	~Tool();
-	void show();
+	virtual void show();
 };

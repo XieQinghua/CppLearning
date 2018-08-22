@@ -5,6 +5,9 @@
 
 #include"Util.h"
 
+int Util::count = 0;
+int Util::test_count = 0;
+
 Util::Util() {
 	cout << "Util constructor function:Util()" << endl;
 
