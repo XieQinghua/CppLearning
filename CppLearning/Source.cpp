@@ -5,6 +5,9 @@
 
 #include<iostream>
 #include"Util.h"
+
+#define MAX(a,b) \
+(a>b?a:b)
 using namespace std;
 
 void change(const int*pt, int n) {
@@ -70,6 +73,12 @@ void test4() {
 	cout << cr << endl;
 	cout << l << endl;
 }
+
+void test5() {
+	int a = 1;
+	int b = 3;
+	cout << MAX(a, b) << endl;
+}
 int main() {
 	/*Util u(1, "Hello");
 	Tool t;
@@ -85,7 +94,7 @@ int main() {
 	Util u;
 	u.get_count();
 	cout<<Util::test_count;*/
-	test4();
+	test5();
 	cin.get();
 	return 0;
 }
