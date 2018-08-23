@@ -25,6 +25,9 @@ public:
 	inline void test_inline2();
 	static int test_count;
 	virtual void show();
+	void test_const_function();
+	void test_const_function() const;
+	void test_const_function(int test);
 	static void get_count() {
 		cout << count << endl;
 	}

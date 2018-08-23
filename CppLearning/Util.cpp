@@ -37,6 +37,21 @@ void Util::show() {
 	cout << "id = " << id << endl << "name = " << name << endl;
 }
 
+void Util::test_const_function()
+{
+	cout << "void Util::test_const_function()" << endl;
+}
+
+void Util::test_const_function() const
+{
+	cout << "void Util::test_const_function() const" << endl;
+}
+
+void Util::test_const_function(int test)
+{
+	cout << "void Util::test_const_function(int test=" << test << ")" << endl;
+}
+
 void Tool::show() {
 	cout << "function = " << function << endl << "typeclass = " << typeclass << endl;
 }

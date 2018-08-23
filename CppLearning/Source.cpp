@@ -91,9 +91,15 @@ void test7() {
 	cout << ff << endl;
 	int a = static_cast<int>(ff);
 	cout << a << endl;
+}
 
-	Util*u = new Util;
-	AnotherUtil*t = static_cast<AnotherUtil>(u);
+void test8() {
+
+	Util u;
+	const Util u_const;
+	u.test_const_function();
+	u.test_const_function(100);
+	u_const.test_const_function();
 }
 
 int main() {
@@ -111,7 +117,7 @@ int main() {
 	Util u;
 	u.get_count();
 	cout<<Util::test_count;*/
-	test7();
+	test8();
 	cin.get();
 	return 0;
 }
