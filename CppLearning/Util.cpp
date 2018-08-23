@@ -44,7 +44,7 @@ void Util::test_const_function()
 
 void Util::test_const_function() const
 {
-	cout << "void Util::test_const_function() const" << endl;
+	cout << "void Util::test_const_function() const" << endl;	
 }
 
 void Util::test_const_function(int test)

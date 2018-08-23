@@ -102,6 +102,18 @@ void test8() {
 	u_const.test_const_function();
 }
 
+#define pi_define 3.1415f
+
+const double pi_const = 3.1415926f;
+
+void test9() {
+	double pi = pi_const;
+	cout << "double pi = " << pi << endl;
+	pi = pi_define;
+	cout << "double pi = " << pi << endl;
+
+}
+
 int main() {
 	/*Util u(1, "Hello");
 	Tool t;
@@ -117,7 +129,7 @@ int main() {
 	Util u;
 	u.get_count();
 	cout<<Util::test_count;*/
-	test8();
+	test9();
 	cin.get();
 	return 0;
 }
