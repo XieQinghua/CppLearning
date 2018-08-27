@@ -46,3 +46,26 @@ public:
 class AnotherUtil {
 
 };
+
+class Another {
+	int a;
+};
+
+class Base {
+private:
+	int b;
+public:
+	virtual void show() {
+		cout << "void Base::show();" << endl;
+	};
+	virtual ~Base() {};
+};
+
+class Derived :public Base{
+private:
+	int d;
+public:
+	void show() {
+		cout << "void Derived::show();" << endl;
+	};
+};
