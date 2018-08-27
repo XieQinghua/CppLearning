@@ -8,6 +8,7 @@
 
 #define MAX(a,b) \
 (a>b?a:b)
+
 using namespace std;
 
 void change(const int*pt, int n) {
@@ -24,7 +25,7 @@ void test1() {
 }
 
 void test2() {
-	int b = 1;
+	const int b = 1;
 	const int *a = &b;
 	cout << *a << endl;
 	//*a++;
@@ -32,6 +33,7 @@ void test2() {
 	int*c = const_cast<int*>(a);
 	*c = 2;
 	cout << *c << endl;
+	cout << b << endl;
 }
 
 void test3() {
@@ -87,7 +89,7 @@ void test6() {
 
 void test7() {
 	float ff = 3.1415f;
-	int i = ff;
+	int i = (int)ff;
 	cout << ff << endl;
 	int a = static_cast<int>(ff);
 	cout << a << endl;
@@ -114,22 +116,55 @@ void test9() {
 
 }
 
-int main() {
-	/*Util u(1, "Hello");
-	Tool t;
-	t.show();*/
-	{
-		//Tool t;
-		//Util u;
-		//Util *uuu = new Tool();
-		//delete uuu;
+void test10() {
+	const int a = 10;
+	const int b = 20;
+	const int *p = &a;
+	cout << *p << endl;
+	p = &b;
+	cout << *p << endl;
+	int c = 30;
+	int* const ppp = &c;
+	c = 40;
+	cout << *ppp << endl;
+}
+
+void test11() {
+	Base*base = new Derived;
+	if (Derived* derived = dynamic_cast<Derived*>(base)) {
+		cout << "基类指针转换派生类指针成功" << endl;
+		derived->show();
 	}
-	//test2();
-	/*
-	Util u;
-	u.get_count();
-	cout<<Util::test_count;*/
-	test9();
+	else {
+		cout << "基类指针转换派生类指针失败" << endl;
+		//derived->show();
+	}
+	base = new Base;
+	if (Derived* derived = dynamic_cast<Derived*>(base)) {
+		cout << "基类指针转换派生类指针成功" << endl;
+		derived->show();
+	}
+	else {
+		cout << "基类指针转换派生类指针失败" << endl;
+		derived->show();
+	}
+
+	int testttt = 1;
+	float ffff = static_cast<float>(testttt);
+	Base*b = new Derived;
+	Derived *d = static_cast<Derived*>(new Base);
+
+	/*char *a = "Hello";
+	int a = static_cast<int>("");*/
+}
+
+void test12() {
+	Base*base = static_cast<Base*>(new Derived);// 通过编译，且是安全的
+	Derived*d = static_cast<Derived*>(new Base);// 通过编译，但是存在安全隐患
+	Another*a = static_cast<Base*>(new Base);// 没有任何关系的两个类，无法转换
+}
+int main() {
+	
 	cin.get();
 	return 0;
 }
