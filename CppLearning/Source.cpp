@@ -69,7 +69,7 @@ void test4() {
 	long pc = reinterpret_cast<long>(i);
 	char *cr = reinterpret_cast<char*>(i);
 	long *l = reinterpret_cast<long*>(i);
-	
+
 	cout << *i << endl;
 	cout << hex << pc << endl;
 	cout << cr << endl;
@@ -156,15 +156,50 @@ void test11() {
 
 	/*char *a = "Hello";
 	int a = static_cast<int>("");*/
+
+	/*const int a = 1;
+	int b = static_cast<int>(a);*/
 }
 
 void test12() {
 	Base*base = static_cast<Base*>(new Derived);// 通过编译，且是安全的
 	Derived*d = static_cast<Derived*>(new Base);// 通过编译，但是存在安全隐患
-	Another*a = static_cast<Base*>(new Base);// 没有任何关系的两个类，无法转换
+												//Another*a = static_cast<Base*>(new Base);// 没有任何关系的两个类，无法转换
+	void *p = new Base;
+
+}
+
+void test13() {
+	/*int temp;
+	cin >> temp;*/
+	cout << "请输入一个数：" << endl;
+	int input;
+	cin >> input;
+	const int a = input;
+	const int*pointer_const = &a;
+	int*b = const_cast<int*>(pointer_const);
+	*b = 20;
+	//int a = 10;
+	//int *b = &a;
+	//*b = 20;
+	cout << "b = " << *b << endl;
+	cout << "a = " << a << endl;
+	cout << "b = " << b << endl;
+	cout << "&a = " << &a << endl;
+	//a = 50;
+	cin.get();
+}
+
+void test14(){
+	/*Derived d;
+	cout << "reinterpret_cast<Base*>(&d) = " << reinterpret_cast<Base*>(&d) << endl;
+	cout << "static_cast<Base*>(&d) = " << static_cast<Base*>(&d) << endl;*/
+	char s[] = "hello world!";
+	long l= reinterpret_cast<long>(s);
+	cout << "l = " << l << endl;
 }
 int main() {
-	
+	test14();
 	cin.get();
 	return 0;
 }
