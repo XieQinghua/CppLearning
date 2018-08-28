@@ -1,5 +1,6 @@
 #pragma once
 
+void call_test();
 void test1();
 void test2();
 void test3();

@@ -6,6 +6,10 @@
 
 using namespace std;
 
+void call_test() {
+	test14();
+}
+
 void change(const int*pt, int n) {
 	int *pc = const_cast<int*>(pt);
 	*pc += n;

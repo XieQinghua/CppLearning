@@ -8,7 +8,8 @@
 #include"test.h"
 
 int main() {
-	test14();
+https://www.taobao.com
+	cout << "welcome to taobao" << endl;
 	cin.get();
 	return 0;
 }
