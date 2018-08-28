@@ -117,9 +117,11 @@
   <ItemGroup>
     <ClCompile Include="function.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="test.cpp" />
     <ClCompile Include="Util.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="test.h" />
     <ClInclude Include="Util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
