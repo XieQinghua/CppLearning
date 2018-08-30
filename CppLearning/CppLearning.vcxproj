@@ -115,6 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="examination.cpp" />
     <ClCompile Include="function.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="test.cpp" />
