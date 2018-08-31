@@ -197,3 +197,29 @@ void test14() {
 	long l = reinterpret_cast<long>(s);
 	cout << "l = " << l << endl;
 }
+
+void test15() {
+	union Data {
+		struct {
+			int x;
+			int y;
+		} s;
+		int x;
+		int y;
+	}d;
+	d.x = 1;
+	d.y = 2;
+	cout << d.x << endl << d.y << endl;
+	d.s.x = d.x*d.x;
+	d.s.y = d.y + d.y;
+	cout << d.s.x << endl << d.s.y << endl;
+	cout << d.x << endl << d.y << endl;
+	cout << "sizeof = " << sizeof(d) << endl;
+}
+
+void test16() {
+	const char*st = "How are you!!!!!";
+	char a[11];
+	strcpy(a, st);
+	cout << a << endl;
+}
