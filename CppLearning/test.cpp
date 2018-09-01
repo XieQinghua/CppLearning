@@ -223,3 +223,37 @@ void test16() {
 	strcpy(a, st);
 	cout << a << endl;
 }
+
+void test_printf() {
+	printf("%6d\n", 12345);
+	printf("%06d\n", 12345);
+	printf("%.6d\n", 12345);
+	printf("%.6s\n", "Hello,printf");
+	printf("%6s\n", "Hi");
+	printf("%.8g\n", 12345678);
+}
+
+void test_scanf() {
+	int i,j = 0;
+	float f;
+	char c;
+	//printf("i = %d\n", i);
+	scanf("%5d%f%c", &i,&f,&c);
+	printf("%d\n", i);
+	printf("%d\n", j);
+	printf("%f\n", f);
+	printf("%c\n", c);
+	cin.get();
+	system("pause");
+}
+
+void test_sizeof_class() {
+	cout << "空类：" << sizeof(AnotherUtil) << endl;
+	cout << "只包含两个int成员的B类: " << sizeof(TestB) << endl;
+	cout << "包含两个int成员和一个void成员函数的A类：" << sizeof(TestA) << endl;
+	cout << "包含两个int成员和一个static成员的C类：" << sizeof(TestC) << endl;
+	cout << "继承A类的D类：" << sizeof(TestD) << endl	;
+	cout << "可能会引起字节对齐的E类：" << sizeof(TestE) << endl;
+	cout << "继承自D和A的F类:" << sizeof(TestF) << endl;
+	cout << "多继承的G类：" << sizeof(TestG) << endl;
+}

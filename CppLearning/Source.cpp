@@ -12,7 +12,7 @@
 using namespace std;
 
 int main() {
-	test16();
+	test_sizeof_class();
 	cin.get();
 	return 0;
 }

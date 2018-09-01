@@ -3,6 +3,7 @@
 **@Date:2018-8-19
 */
 #pragma once
+#pragma pack(4)
 
 #include<iostream>
 #include<string>
@@ -68,4 +69,54 @@ public:
 	void show() {
 		cout << "void Derived::show();" << endl;
 	};
+};
+
+// 包含两个int成员和一个成员函数的测试类
+class TestA {
+private:
+	int a;
+	int b;
+public:
+	void show() const;
+};
+
+// 只包含两个int成员的情况
+class TestB {
+private:
+	int a;
+	int b;
+};
+
+// 包含两个成员和一个静态成员的情况
+class TestC {
+private:
+	int a;
+	int b;
+	static int c;
+public:
+	static int show();
+};
+
+class TestD :public TestA {
+private:
+	int x;
+	int y;
+};
+
+//可能会引起字节对齐的E类
+class TestE  {
+private:
+	float f1;
+	float f2;
+	char c;
+};
+
+// 两层继承结构体系
+class TestF :public TestD {
+
+};
+
+// 多继承
+class TestG :public TestD, TestE {
+
 };

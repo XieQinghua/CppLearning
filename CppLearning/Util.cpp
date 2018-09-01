@@ -55,3 +55,16 @@ void Util::test_const_function(int test)
 void Tool::show() {
 	cout << "function = " << function << endl << "typeclass = " << typeclass << endl;
 }
+
+void TestA::show() const
+{
+	cout << "a = " << a << "b = " << b << endl;
+}
+
+int TestC::c = 1;
+
+int TestC::show()
+{
+	cout << "c = " << TestC::c << endl;
+	return 0;
+}
