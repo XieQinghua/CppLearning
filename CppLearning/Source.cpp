@@ -11,12 +11,12 @@
 
 using namespace std;
 
-//int main(int agc,char** args) {
-//	//test_sizeof_class();
-//	for (int i = 0; i < agc; i++) {
-//		cout << args[i] << endl;
-//	}
-//	cin.get();
-//	return 0;
-//}
+int main(int agc,char** args) {
+	test_E_float();
+	/*for (int i = 0; i < agc; i++) {
+		cout << args[i] << endl;
+	}*/
+	cin.get();
+	return 0;
+}
 

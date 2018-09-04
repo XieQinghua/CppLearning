@@ -27,3 +27,6 @@ void test_scanf();
 
 // 测试使用不同类型的类的大小，包括静态成员、虚函数、继承、友元、空类等情况
 void test_sizeof_class();
+
+// 测试实型浮点数的使用方法
+void test_E_float();

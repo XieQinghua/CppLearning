@@ -257,3 +257,10 @@ void test_sizeof_class() {
 	cout << "继承自D和A的F类:" << sizeof(TestF) << endl;
 	cout << "多继承的G类：" << sizeof(TestG) << endl;
 }
+
+void test_E_float() {
+	cout << 1.E-5 << endl;
+	cout << .2E-5 << endl;
+	cout << 1.2E-5 << endl;
+	cout << 1e5 << endl;
+}
