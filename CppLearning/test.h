@@ -30,3 +30,12 @@ void test_sizeof_class();
 
 // 测试实型浮点数的使用方法
 void test_E_float();
+
+// fstream的使用方法
+void test_fstream();
+
+// int&强制转换的使用方法
+void test_intref();
+
+// scanf格式控制符的使用
+void test_scanf_format();

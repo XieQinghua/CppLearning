@@ -264,3 +264,25 @@ void test_E_float() {
 	cout << 1.2E-5 << endl;
 	cout << 1e5 << endl;
 }
+
+void test_fstream() {
+	string str;
+	fstream in_file("test.txt",ios::in);
+	//in_file << str << endl;
+	in_file >> str;
+	cout << "str = " << str << endl;
+}
+
+void test_intref() {
+	float fa = 1.0f;
+	cout << (int&)fa << endl;
+	float fb = 0.0f;
+	cout << (int&)fb << endl;
+}
+
+void test_scanf_format()
+{
+	float f;
+	scanf("%d", &f);
+	printf("f = %d\n", f);
+}

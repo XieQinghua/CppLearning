@@ -12,7 +12,7 @@
 using namespace std;
 
 int main(int agc,char** args) {
-	test_E_float();
+	test_scanf_format();
 	/*for (int i = 0; i < agc; i++) {
 		cout << args[i] << endl;
 	}*/

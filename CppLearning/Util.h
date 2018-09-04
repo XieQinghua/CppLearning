@@ -3,10 +3,11 @@
 **@Date:2018-8-19
 */
 #pragma once
-#pragma pack(4)
 
 #include<iostream>
 #include<string>
+#include<fstream>
+
 
 using namespace std;
 
