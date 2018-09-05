@@ -263,6 +263,7 @@ void test_E_float() {
 	cout << .2E-5 << endl;
 	cout << 1.2E-5 << endl;
 	cout << 1e5 << endl;
+	cout << .1 << endl;
 }
 
 void test_fstream() {
