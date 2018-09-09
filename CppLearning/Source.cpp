@@ -91,12 +91,12 @@ using namespace std;
 
 int main() {
 
-	int a = 1;
-	int b = 100;
-	int c = 1;
-	c = (a++, b++);
-	printf("%d",c);
-
+	char c;
+	int a, b;
+	cin >> a  >> b;
+	cout << "a = " << a << endl;
+	cout << "b = " << b << endl;
+	cin.get();
 	cin.get();
 
 	return 0;
