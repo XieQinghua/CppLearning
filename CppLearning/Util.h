@@ -7,7 +7,12 @@
 #include<iostream>
 #include<string>
 #include<fstream>
-
+#include<vector>
+#include<map>
+#include<set>
+#include<list>
+#include<array>
+#include<deque>
 
 using namespace std;
 

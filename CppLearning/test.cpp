@@ -287,3 +287,36 @@ void test_scanf_format()
 	scanf("%d", &f);
 	printf("f = %d\n", f);
 }
+
+void memcpy(void * src, const void * dst, int len)
+{
+
+}
+
+#include<vector>
+void test_vector()
+{
+	vector<int> v;
+
+	for (int i = 0; i < 10; i++) {
+		cout << "size = " << v.size() << "  capacity = " << v.capacity() << endl;
+		v.push_back(i);
+	}
+	cout<< "size = " << v.size() << "  capacity = " << v.capacity() << endl;
+}
+
+void test_map()
+{
+	map<int, string> map_test;
+	//string name[] = { "I","AM","Jason","Lee" };
+	for (int index = 0; index < 100; index++) {
+		map_test.insert(pair<int, string>(index, to_string(index) + "test"));
+	}
+
+	for (auto it = map_test.begin(); it != map_test.end(); it++) {
+		cout << it->first << " " << it->second << endl;
+	}
+
+	auto it = map_test.find(5);
+	cout << it->first << " " << it->second << endl;
+}

@@ -39,3 +39,12 @@ void test_intref();
 
 // scanf格式控制符的使用
 void test_scanf_format();
+
+// memcpy的使用
+void memcpy(void *src, const void *dst, int len);
+
+// vector的使用
+void test_vector();
+
+// map的使用
+void test_map();

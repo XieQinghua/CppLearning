@@ -6,12 +6,18 @@
 #include<iostream>
 #include<string>
 #include<algorithm>
+#include<map>
 #include"util.h"
 #include"test.h"
 
 using namespace std;
 
+int main() {
+	test_vector();
+	cin.get();
 
+	return 0;
+}
 //int main()
 //{
 //	int
@@ -54,13 +60,5 @@ using namespace std;
 //	return 0;
 //}
 
-Util u;
+//Util u;
 
-int main() {
-	cout << "MAIN()" << endl;
-	
-	cin.get();
-	cin.get();
-
-	return 0;
-}
