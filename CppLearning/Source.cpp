@@ -13,7 +13,7 @@
 using namespace std;
 
 int main() {
-	test_vector();
+	test_ref();
 	cin.get();
 
 	return 0;

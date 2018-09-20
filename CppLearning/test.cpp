@@ -320,3 +320,11 @@ void test_map()
 	auto it = map_test.find(5);
 	cout << it->first << " " << it->second << endl;
 }
+
+void test_ref()
+{
+	const char a = 10;
+	const char &b = a;
+	cout << "sizeof(int&) = " << sizeof(b) << endl;
+	cout << b << endl;
+}

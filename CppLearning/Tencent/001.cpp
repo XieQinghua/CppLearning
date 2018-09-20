@@ -20,7 +20,7 @@ int main(){
 		int temp_max = input[i];
 		int temp_sum = abs(input[i]);
 		for(int j = i+1;j<N-1;j++){
-			temp_sum+=input[j];
+			temp_sum+=(-input[j]);
 			if(temp_sum>temp_max){
 				
 			}
