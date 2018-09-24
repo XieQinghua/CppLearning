@@ -323,8 +323,14 @@ void test_map()
 
 void test_ref()
 {
-	const char a = 10;
-	const char &b = a;
-	cout << "sizeof(int&) = " << sizeof(b) << endl;
-	cout << b << endl;
+	struct ref_mem {
+		int a = 0;
+		int&b = a;
+	};
+
+	ref_mem rm;
+	int b = 10;
+	int &a = b;
+	cout << "a = " << a << endl;
+	cout << "b = " << b << endl;
 }
