@@ -329,8 +329,21 @@ void test_ref()
 	};
 
 	ref_mem rm;
-	int b = 10;
-	int &a = b;
-	cout << "a = " << a << endl;
-	cout << "b = " << b << endl;
+	//cout << "sizeof = " << sizeof(rm) << endl;
+
+	int a[] = { 0,1,2,3,4,5,6,7,8,9 };
+	int (&b)[10] = a;
+	/*for (int i = 0; i < 10; i++) {
+		cout << "&b[" << i << "] = " << &b[i] << " "
+			<< "&a[" << i << "] = " << &a[i] << " "
+			<< "b[" << i << "] = " << b[i] << endl;
+	}*/
+
+	int data = 100;
+	int *pointer = &data;
+	int*&ptr_ref = pointer;
+	cout << "*pointer = " << *pointer 
+		<< "  pointer = " << pointer << endl;
+	cout << "*ptr_ref = " << *ptr_ref 
+		<< "  ptr_ref = " << ptr_ref << endl;
 }
