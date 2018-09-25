@@ -337,8 +337,41 @@ void function_ref_array(int(&ref_arr)[10]) {
 	}
 }
 
+int &return_ref(int &a) {
+	a *= 100;
+	return a;
+}
+
+int return_data(int a) {
+	return a * 100;
+}
+
+int &return_local_ref() {
+	int data = 100;
+	int &local = data;
+	return local;
+}
+
+int* &return_new_ref() {
+	int *a = new int[5];
+	int *(&a_ref) = a;
+	return a_ref;
+}
+
 void test_ref()
 {
+	/*int*ptr = return_new_ref();
+	for (int i = 0; i < 5; i++) {
+		cout << ptr[i] << " ";
+	}
+	delete [] ptr;*/
+
+	/*int data = 100;
+	int &a = return_ref(data);
+	cout << a << endl;
+	int &b = return_local_ref();
+	cout << b << endl;
+*/
 	struct ref_mem {
 		int a = 0;
 		int&b = a;
@@ -381,7 +414,6 @@ void test_ref()
 	/*Util test;
 	function_object_ref(test);*/
 
-	int a[] = { 0,1,2,3,4,5,6,7,8,9 };
-	function_ref_array(a);
-
+	/*int a[] = { 0,1,2,3,4,5,6,7,8,9 };
+	function_ref_array(a);*/
 }
