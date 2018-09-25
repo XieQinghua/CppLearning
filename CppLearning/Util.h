@@ -24,6 +24,7 @@ private:
 
 public:
 	Util();
+	Util(const Util &u);
 	Util(int id, string name);
 	~Util();
 	inline void test_inline() {
@@ -38,6 +39,8 @@ public:
 	static void get_count() {
 		cout << count << endl;
 	}
+
+	Util& operator=(const Util&src); 
 };
 
 class Tool :public Util {

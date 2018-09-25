@@ -321,6 +321,22 @@ void test_map()
 	cout << it->first << " " << it->second << endl;
 }
 
+void swap(int&a, int&b) {
+	int temp = a;
+	a = b;
+	b = temp;
+}
+
+void function_object_ref(Util &a) {
+	cout << "function_object_ref have called." << endl;
+}
+
+void function_ref_array(int(&ref_arr)[10]) {
+	for (int i = 0; i < 10; i++) {
+		cout << ref_arr[i] << " ";
+	}
+}
+
 void test_ref()
 {
 	struct ref_mem {
@@ -331,8 +347,8 @@ void test_ref()
 	ref_mem rm;
 	//cout << "sizeof = " << sizeof(rm) << endl;
 
-	int a[] = { 0,1,2,3,4,5,6,7,8,9 };
-	int (&b)[10] = a;
+	/*int a[] = { 0,1,2,3,4,5,6,7,8,9 };
+	int (&b)[10] = a;*/
 	/*for (int i = 0; i < 10; i++) {
 		cout << "&b[" << i << "] = " << &b[i] << " "
 			<< "&a[" << i << "] = " << &a[i] << " "
@@ -347,10 +363,25 @@ void test_ref()
 	cout << "*ptr_ref = " << *ptr_ref 
 		<< "  ptr_ref = " << ptr_ref << endl;*/
 
-	int data = 100;
+	/*int data = 100;
 	const int &const_ref = data;
 	cout << "const_ref = "<< const_ref << endl;
 	int &ref = const_cast<int&>(const_ref);
 	ref = 200;
 	cout << "data = " << data << endl;
+
+	int a = 10;
+	int b = 20;
+	cout << "a = " << a << endl;
+	cout << "b = " << b << endl;
+	swap(a, b);
+	cout << "call swap(a, b) function" << endl;
+	cout << "a = " << a << endl;
+	cout << "b = " << b << endl;*/
+	/*Util test;
+	function_object_ref(test);*/
+
+	int a[] = { 0,1,2,3,4,5,6,7,8,9 };
+	function_ref_array(a);
+
 }

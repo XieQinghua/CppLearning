@@ -10,7 +10,11 @@ int Util::test_count = 0;
 
 Util::Util() {
 	cout << "Util constructor function:Util()" << endl;
+}
 
+Util::Util(const Util & u)
+{
+	cout << "Util::Util(const Util & u);" << endl;
 }
 
 Util::~Util() {
@@ -50,6 +54,14 @@ void Util::test_const_function() const
 void Util::test_const_function(int test)
 {
 	cout << "void Util::test_const_function(int test=" << test << ")" << endl;
+}
+
+Util & Util::operator=(const Util & src)
+{
+	if (this != &src) {
+		cout << "calling operator=(const Util&)" << endl;
+	}
+	return *this;
 }
 
 void Tool::show() {
