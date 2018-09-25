@@ -339,11 +339,18 @@ void test_ref()
 			<< "b[" << i << "] = " << b[i] << endl;
 	}*/
 
-	int data = 100;
+	/*int data = 100;
 	int *pointer = &data;
 	int*&ptr_ref = pointer;
 	cout << "*pointer = " << *pointer 
 		<< "  pointer = " << pointer << endl;
 	cout << "*ptr_ref = " << *ptr_ref 
-		<< "  ptr_ref = " << ptr_ref << endl;
+		<< "  ptr_ref = " << ptr_ref << endl;*/
+
+	int data = 100;
+	const int &const_ref = data;
+	cout << "const_ref = "<< const_ref << endl;
+	int &ref = const_cast<int&>(const_ref);
+	ref = 200;
+	cout << "data = " << data << endl;
 }
