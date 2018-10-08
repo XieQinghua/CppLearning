@@ -360,6 +360,10 @@ int* &return_new_ref() {
 
 void test_ref()
 {
+	Derived d;
+	Base &b = d;
+	b.show();
+
 	/*int*ptr = return_new_ref();
 	for (int i = 0; i < 5; i++) {
 		cout << ptr[i] << " ";
@@ -417,3 +421,4 @@ void test_ref()
 	/*int a[] = { 0,1,2,3,4,5,6,7,8,9 };
 	function_ref_array(a);*/
 }
+

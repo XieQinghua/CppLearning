@@ -68,7 +68,9 @@ public:
 	virtual void show() {
 		cout << "void Base::show();" << endl;
 	};
-	virtual ~Base() {};
+	virtual ~Base() {
+		cout << "~Base();" << endl;
+	};
 };
 
 class Derived :public Base{
@@ -78,6 +80,9 @@ public:
 	void show() {
 		cout << "void Derived::show();" << endl;
 	};
+	~Derived() {
+		cout << "~Derived()" << endl;
+	}
 };
 
 // 包含两个int成员和一个成员函数的测试类

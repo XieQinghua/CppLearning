@@ -33,12 +33,21 @@
     <ClCompile Include="CMain.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="STL_Learning.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Util.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="STL_Learning.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

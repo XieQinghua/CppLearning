@@ -122,10 +122,13 @@
     <ClCompile Include="examination.cpp" />
     <ClCompile Include="function.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="STL_Learning.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="Util.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="stdio.h" />
+    <ClInclude Include="STL_Learning.h" />
     <ClInclude Include="test.h" />
     <ClInclude Include="Util.h" />
   </ItemGroup>
