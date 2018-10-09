@@ -15,7 +15,7 @@
 using namespace std;
 
 int main() {
-	test_include();
+	use_vector();
 	cin.get();
 
 	return 0;

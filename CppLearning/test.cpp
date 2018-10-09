@@ -422,3 +422,24 @@ void test_ref()
 	function_ref_array(a);*/
 }
 
+void use_vector()
+{
+	vector<int> v(10,1);
+	cout << "sizeof(v)= " << sizeof(v) << endl;
+	/*for (auto it = v.begin(); it != v.end(); it++) {
+		cout << *it << " ";
+	}*/
+	v.push_back(100);
+	for (auto&ele : v) {
+		cout << ele << " ";
+	}
+	//cout << endl;
+	cout << "v.size() = " << v.size() << endl;
+	cout << "v.capacity() = " << v.capacity() << endl;
+
+	
+	vector<int> v2(v);
+	v.clear();
+	cout << v2[0] << endl;
+}
+

@@ -52,4 +52,7 @@ void test_map();
 // 引用和指针的对比
 void test_ref();
 
+// vector 使用举例
+void use_vector();
+
 
