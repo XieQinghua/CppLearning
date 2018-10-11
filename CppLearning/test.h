@@ -55,4 +55,7 @@ void test_ref();
 // vector 使用举例
 void use_vector();
 
+// vector 使用举例1
+void use_vector1();
+
 

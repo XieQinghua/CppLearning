@@ -443,3 +443,24 @@ void use_vector()
 	cout << v2[0] << endl;
 }
 
+void use_vector1()
+{
+	vector<int> v{ 1,2,3,4,5,6,7,8,9 };
+	//for (int i=0; i < 20; i++) {
+	//	v.push_back(i);
+	//	//cout<<"i = "<<i
+	//	//	<< " size = " << v.size()
+	//	//	<< " capacity = " << v.capacity() 
+	//	//	/*<< " sizeof(v) = "<<sizeof(v)*/
+	//	//	/*<< " max_size = " << v.max_size() */<< endl;
+	//}
+
+	/*vector<int> v1(10);
+	cout << "size = " << v1.size() << " capacity = " << v1.capacity() << endl;*/
+	vector<int> v2(v.begin(), v.end());
+	for (const auto&elem : v2) {
+		cout << elem << " ";
+	}
+}
+
+
