@@ -515,4 +515,22 @@ void use_vector1()
 	}
 }
 
+// dequeÊ¹ÓÃ¾ÙÀı
+void use_deque()
+{
+	deque<int> c{ 1,2,3,4,5,6,7,8,9 };
+	cout << "c.empty() = " << c.empty() << endl
+		<< "c.size() = " << c.size() << endl
+		<< "c.max_size()" << c.max_size() << endl;
+	for (auto it = c.cbegin(); it != c.cend(); it++) {
+		cout << *it << " ";
+	}
+	deque<int> c2;
+	c2 = c;
+	c.clear();
+	for (auto it = c2.cbegin(); it != c2.cend(); it++) {
+		cout << *it << " ";
+	}
+}
+
 

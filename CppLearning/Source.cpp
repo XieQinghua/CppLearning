@@ -15,7 +15,7 @@
 using namespace std;
 
 int main() {
-	use_vector1();
+	use_deque();
 	cin.get();
 
 	return 0;
