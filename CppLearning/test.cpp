@@ -445,7 +445,7 @@ void use_vector()
 
 void use_vector1()
 {
-	vector<int> v{ 1,2,3,4,5,6,7,8,9 };
+	/*vector<int> v*//*{ 1,2,3,4,5,6,7,8,9 }*/;
 	//for (int i=0; i < 20; i++) {
 	//	v.push_back(i);
 	//	//cout<<"i = "<<i
@@ -467,7 +467,52 @@ void use_vector1()
 	v.clear();
 	cout << v.front() << endl;*/
 
-
+	/*for (auto it = v.cbegin(); it != v.cend();it++) {
+		cout << *it << " ";
+	}
+	cout << endl;*/
+	/*for (auto it = v.crbegin(); it != v.crend(); it++) {
+		cout << *it << " ";
+	}*/
+	/*cout << endl;
+	for (auto it = v.cend()-1; it != v.cbegin(); --it) {
+		cout << *it << " ";
+	}*/
+	/*v.resize(1);
+	for (auto it = v.crbegin(); it != v.crend(); it++) {
+	cout << *it << " ";
+	}
+	try {
+		cout << v[5] << endl;
+	}
+	catch (exception e) {
+		cout << "catch it" << endl;
+	}*/
+	vector<int>v;
+	vector<int>v2{ -1,-2,-3,-4 };
+	cout << "Source data:";
+	for (int i = 0; i < 10; i++) {
+		v.push_back(i);
+	}
+	for (const auto&elem : v) {
+		cout << elem << " ";
+	}
+	
+	cout << endl << "insert vector 2:";
+	v.insert(v.end(), v2.begin(), v2.end());
+	for (const auto&elem : v) {
+		cout << elem << " ";
+	}
+	
+	cout << endl << "remove vector 2:";
+	auto begin_it = v.begin();
+	while (*begin_it != *v2.begin()) {
+		begin_it++;
+	}
+	v.erase(begin_it, v.end());
+	for (const auto&elem : v) {
+		cout << elem << " ";
+	}
 }
 
 
