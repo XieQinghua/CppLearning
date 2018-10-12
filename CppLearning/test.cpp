@@ -457,10 +457,17 @@ void use_vector1()
 
 	/*vector<int> v1(10);
 	cout << "size = " << v1.size() << " capacity = " << v1.capacity() << endl;*/
-	vector<int> v2(v.begin(), v.end());
-	for (const auto&elem : v2) {
+	/*vector<int> v2(v.begin(), v.end());
+	vector<int> v3 = move(v2);
+	for (const auto&elem : v3) {
 		cout << elem << " ";
 	}
+	cout << static_cast<int>(v.empty()) << endl;
+	cout << v[10] << endl;
+	v.clear();
+	cout << v.front() << endl;*/
+
+
 }
 
 
