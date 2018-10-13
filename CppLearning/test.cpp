@@ -532,5 +532,3 @@ void use_deque()
 		cout << *it << " ";
 	}
 }
-
-
