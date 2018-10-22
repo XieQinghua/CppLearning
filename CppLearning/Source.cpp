@@ -11,13 +11,13 @@
 #include"./../stdio.h"
 #include"util.h"
 #include"test.h"
+#include"STL_Learning.h"
 
 using namespace std;
 
 int main() {
-	use_deque();
+	use_multiset();
 	cin.get();
-
 	return 0;
 }
 //int main()
