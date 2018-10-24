@@ -14,7 +14,6 @@ void use_multiset() {
 	for (auto it = sss.cbegin(); it != sss.cend(); it++) {
 		cout << *it << endl;
 	}
-
 	multimap<int, string> sss2{{10, "Hello"}, { 2,"Apple" }};
 
 	for (auto elem : sss2) {
