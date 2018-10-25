@@ -20,5 +20,3 @@ void use_multiset() {
 		cout << elem.first << " " << elem.second << endl;
 	}
 }
-
-

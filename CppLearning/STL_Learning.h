@@ -12,4 +12,9 @@ public:
 private:
 };
 
+
+class UseSet {
+public:
+private:
+};
 void use_multiset();
