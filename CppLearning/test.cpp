@@ -532,3 +532,17 @@ void use_deque()
 		cout << *it << " ";
 	}
 }
+
+void random_number()
+{
+	ofstream output("./data.txt",ios::app);
+	for (size_t i = 1; i <= 100; i++)
+	{
+		if (i % 5 == 0 && i != 0) {
+			output << rand() % 100 << endl;
+		}
+		else {
+			output << rand() % 100 << ",";
+		}
+	}
+}

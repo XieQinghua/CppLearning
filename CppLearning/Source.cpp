@@ -14,9 +14,9 @@
 #include"STL_Learning.h"
 
 using namespace std;
-
+void caluateSEofMatrix();
 int main() {
-	use_multiset();
+	random_number();
 	cin.get();
 	return 0;
 }

@@ -1,5 +1,6 @@
 #include<iostream>
 #include<cmath>
+#include<vector>
 
 using namespace std;
 
@@ -44,104 +45,128 @@ void caluateSEofMatrix() {
 	int status[12];
 	float min[12];
 	float cacluate[12];
+	int coordinate[12];
+	int min_coord[12];
 	float min_var = 1000.0f;
 	fill(status, status + 12, 0);
-	for (size_t i = 0; i < 12; i++)
+	for (int i = 0; i < 12; i++)
 	{
 		min[i] = input[i][i];
 	}
 	// select the data which meets the requirments
-	for (size_t i1 = 0; i1 < 12; i1++)
+	for (int i1 = 0; i1 < 12; i1++)
 	{
+		cout << "i1 = " << i1 << endl;
 		status[i1]++;
-		cacluate[1] = input[1][i1];
+		cacluate[0] = input[1][i1];
+		coordinate[0] = i1;
 		// the second row.
-		for (size_t i2 = 0; i2 < 12; i2++)
+		for (int i2 = 0; i2 < 12; i2++)
 		{
 			// this column have visited.
 			if (status[i2])
 				continue;
 			status[i2]++;
-			cacluate[2] = input[2][i2];
+			cacluate[1] = input[2][i2];
+			coordinate[1] = i2;
 			// the third row.
-			for (size_t i3 = 0; i3 < 12; i3++)
+			for (int i3 = 0; i3 < 12; i3++)
 			{
 				// this column have visited.
 				if (status[i3])
 					continue;
 				status[i3]++;
-				cacluate[3] = input[3][i3];
+				cacluate[2] = input[3][i3];
+				coordinate[2] = i3;
 				// the fourth row.
-				for (size_t i4 = 0; i4 < 12; i4++)
+				for (int i4 = 0; i4 < 12; i4++)
 				{
 					// this column have visited.
 					if (status[i4])
 						continue;
 					status[i4]++;
-					cacluate[4] = input[4][i4];
+					cacluate[3] = input[4][i4];
+					coordinate[3] = i4;
 					// the fifth row.
-					for (size_t i5 = 0; i5 < 12; i5++)
+					for (int i5 = 0; i5 < 12; i5++)
 					{
 						// this column have visited.
 						if (status[i5])
 							continue;
 						status[i5]++;
-						cacluate[5] = input[5][i5];
+						cacluate[4] = input[5][i5];
+						coordinate[4] = i5;
 						// the sixth row.
-						for (size_t i6 = 0; i6 < 12; i6++)
+						for (int i6 = 0; i6 < 12; i6++)
 						{
 							// this column have visited.
 							if (status[i6])
 								continue;
 							status[i6]++;
-							cacluate[6] = input[6][i6];
+							cacluate[5] = input[6][i6];
+							coordinate[5] = i6;
 							// the seventh row.
-							for (size_t i7 = 0; i7 < 12; i7++)
+							for (int i7 = 0; i7 < 12; i7++)
 							{
 								// this column have visited.
 								if (status[i7])
 									continue;
 								status[i7]++;
-								cacluate[7] = input[7][i7];
+								cacluate[6] = input[7][i7];
+								coordinate[6] = i7;
 								// the eighth row
-								for (size_t i8 = 0; i8 < 12; i8++)
+								for (int i8 = 0; i8 < 12; i8++)
 								{
 									// this column have visited.
 									if (status[i8])
 										continue;
 									status[i8]++;
-									cacluate[8] = input[8][i8];
+									cacluate[7] = input[8][i8];
+									coordinate[7] = i8;
 									// the nineth row
-									for (size_t i9 = 0; i9 < 12; i9++)
+									for (int i9 = 0; i9 < 12; i9++)
 									{
 										// this column have visited.
 										if (status[i9])
 											continue;
 										status[i9]++;
-										cacluate[9] = input[9][i9];
+										cacluate[8] = input[9][i9];
+										coordinate[8] = i9;
 										// the tenth row.
-										for (size_t i10 = 0; i10 < 12; i10++)
+										for (int i10 = 0; i10 < 12; i10++)
 										{
 											// this column have visited.
 											if (status[i10])
 												continue;
 											status[i10]++;
-											cacluate[10] = input[10][i10];
+											cacluate[9] = input[10][i10];
+											coordinate[9] = i10;
 											// the eleventh row.
-											for (size_t i11 = 0; i11 < 12; i11++)
+											for (int i11 = 0; i11 < 12; i11++)
 											{
 												// this column have visited.
 												if (status[i11])
 													continue;
 												status[i11]++;
-												cacluate[11] = input[11][i11];
+												cacluate[10] = input[11][i11];
+												coordinate[10] = i11;
 												// the twelfth row.
-												for (size_t i12 = 0; i12 < 12; i12++)
+												for (int i12 = 0; i12 < 12; i12++)
 												{
 													// this column have visited.
 													if (status[i12])
 														continue;
-													cacluate[12] = input[12][i12];
+													cacluate[11] = input[12][i12];
+													coordinate[11] = i12;
+													float temp = variance(cacluate);
+													if (temp < min_var) {
+														for (int i = 0; i < 12; i++)
+														{
+															min[i] = cacluate[i];
+															min_coord[i] = coordinate[i];
+														}
+														min_var = temp;
+													}
 												}// the twelfth row
 												status[i11]--;
 											}// the eleventh row.
@@ -164,18 +189,11 @@ void caluateSEofMatrix() {
 			status[i2]--;
 		}// the second row.	
 		status[i1]--;
-		float temp = variance(cacluate);
-		if (temp < min_var) {
-			for (int i = 0; i < 12; i++)
-			{
-				min[i] = cacluate[i];
-			}
-		}
-		min_var = temp;
 	}
-	for (size_t i = 0; i < 12; i++)
+	cout << "min_var:" << min_var << endl;
+	for (int i = 0; i < 12; i++)
 	{
-		cout << min[i] << " ";
+		cout << "coordinate:" << "(" << i + 1 << "," << (char)(min_coord[i] + 'A') << ")=" << min[i] << endl;
 	}
 
 }

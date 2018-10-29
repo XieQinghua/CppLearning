@@ -61,4 +61,6 @@ void use_vector1();
 // deque 使用举例
 void use_deque();
 
+// 生成随机数
+void random_number();
 
