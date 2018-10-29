@@ -125,6 +125,7 @@
     <ClCompile Include="STL_Learning.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="Util.cpp" />
+    <ClCompile Include="WeiMing.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdio.h" />
