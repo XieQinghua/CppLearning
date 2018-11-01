@@ -16,7 +16,7 @@
 using namespace std;
 void caluateSEofMatrix();
 int main() {
-	random_number();
+	test_const_override();
 	cin.get();
 	return 0;
 }

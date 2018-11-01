@@ -10,6 +10,7 @@ int Util::test_count = 0;
 
 Util::Util() {
 	cout << "Util constructor function:Util()" << endl;
+	name = "no name";
 }
 
 Util::Util(const Util & u)
@@ -18,7 +19,7 @@ Util::Util(const Util & u)
 }
 
 Util::~Util() {
-	cout << "Util deconstructor function:~Util()" << endl;
+	cout << "Util deconstructor function:~Util(),object name is " << name << "." << endl;
 }
 
 Util::Util(int id, string name) :id(id), name(name) {
@@ -54,6 +55,16 @@ void Util::test_const_function() const
 void Util::test_const_function(int test)
 {
 	cout << "void Util::test_const_function(int test=" << test << ")" << endl;
+}
+
+void Util::test_show_const()
+{
+	cout << "function:void Util::test_show_const()" << endl;
+}
+
+void Util::test_show_const() const
+{
+	cout << "function:void Util::test_show_const() const" << endl;
 }
 
 Util & Util::operator=(const Util & src)

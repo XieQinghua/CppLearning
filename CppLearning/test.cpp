@@ -546,3 +546,11 @@ void random_number()
 		}
 	}
 }
+
+void test_const_override()
+{
+	Util test_u("noconst");
+	test_u.test_const_function();
+	const Util test_const_u("const");
+	test_const_u.test_const_function();
+}

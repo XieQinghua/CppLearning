@@ -24,6 +24,9 @@ private:
 
 public:
 	Util();
+	Util(string object) :name(object) { 
+		cout << "object name:" << name << endl; 
+	};
 	Util(const Util &u);
 	Util(int id, string name);
 	~Util();
@@ -39,6 +42,9 @@ public:
 	static void get_count() {
 		cout << count << endl;
 	}
+
+	void test_show_const();
+	void test_show_const() const;
 
 	Util& operator=(const Util&src); 
 };

@@ -64,3 +64,6 @@ void use_deque();
 // 生成随机数
 void random_number();
 
+// 测试const重载
+void test_const_override();
+
