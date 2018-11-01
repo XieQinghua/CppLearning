@@ -67,3 +67,8 @@ void random_number();
 // 测试const重载
 void test_const_override();
 
+// 使用^和&运算符
+void test_AND_OR();
+
+// 
+void test_1101();

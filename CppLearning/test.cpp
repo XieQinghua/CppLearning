@@ -554,3 +554,20 @@ void test_const_override()
 	const Util test_const_u("const");
 	test_const_u.test_const_function();
 }
+
+void test_AND_OR()
+{
+	int a = 7;
+	int b = 1;
+	cout << "a^b = " << (a ^ b) << endl;
+	cout << "(a & b) = " << (a & b) << endl;
+	cout << "((a & b)<<1) = " << ((a & b)<<1) << endl;
+}
+
+void test_1101()
+{
+	int a = 10;
+	while (a-- > 0) {
+		cout << "a = " << a << endl;
+	}
+}
