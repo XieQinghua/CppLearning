@@ -1,7 +1,15 @@
 #include"STL_Learning.h"
 
 void use_multiset() {
-	cout << "multiset:" << endl;
+	multiset<string> ms{ "apple","xiaomi","huawei","vivo","oppo" };
+	for (auto&elem : ms) {
+		cout << elem << " ";
+	}
+	cout << endl;
+	for (auto it = ms.cbegin(); it != ms.cend(); it++) {
+		cout << *it << " ";
+	}
+	/*cout << "multiset:" << endl;
 	multiset<string> ms{ "B","C","A","A","A" };
 	for (auto&it : ms) {
 		cout << it << " ";
@@ -11,7 +19,7 @@ void use_multiset() {
 	for (auto&it : s) {
 		cout << it << " ";
 	}
-
+*/
 	/*set<Person, PersonSortCriterion> coll;
 	coll.insert(Person("jason", "lee"));
 	coll.insert(Person("Jack", "chen"));

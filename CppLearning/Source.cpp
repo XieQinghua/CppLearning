@@ -16,7 +16,7 @@
 using namespace std;
 void caluateSEofMatrix();
 int main() {
-	use_search_set();
+	use_multiset();
 	cin.get();
 	return 0;
 }
