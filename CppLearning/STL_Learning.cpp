@@ -1,7 +1,19 @@
 #include"STL_Learning.h"
 
 void use_multiset() {
-	multiset<string> sss{
+
+	/*set<Person, PersonSortCriterion> coll;
+	coll.insert(Person("jason", "lee"));
+	coll.insert(Person("Jack", "chen"));
+	coll.insert(Person("apple", "lee"));
+	Person p("K", "L");
+	cout << p << endl;
+
+	for (auto it = coll.begin(); it != coll.end(); it++) {
+		cout << *it << endl;
+	}*/
+
+	/*multiset<string> sss{
 		"jkasd","djakf","teijo","adfae"
 	};
 
@@ -23,5 +35,12 @@ void use_multiset() {
 
 	for (auto elem : sss2) {
 		cout << elem.first << " " << elem.second << endl;
-	}
+	}*/
+}
+
+ostream &operator<<(ostream&out,const Person & p)
+{
+	// TODO: insert return statement here
+	cout << p.firstname << " " << p.lastname;
+	return out;
 }
