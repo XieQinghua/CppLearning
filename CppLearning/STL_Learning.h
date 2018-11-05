@@ -35,3 +35,6 @@ private:
 };
 // 本例是用来测试set和multiset的使用方法
 void use_multiset();
+
+// 展示set的查找函数的能力
+void use_search_set();
