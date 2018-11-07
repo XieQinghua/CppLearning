@@ -18,8 +18,8 @@ public:
 class PersonSortCriterion {
 public:
 	bool operator() (const Person&p1, const Person&p2) const {
-		return p1.lastname < p2.lastname ||
-			(p1.lastname == p2.lastname&&p1.firstname < p2.firstname);
+		return p1.firstname < p2.firstname ||
+			(p1.firstname == p2.firstname&&p1.lastname < p2.lastname);
 	}
 };
 

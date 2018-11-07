@@ -1,14 +1,20 @@
 #include"STL_Learning.h"
 
 void use_multiset() {
-	multiset<string> ms{ "apple","xiaomi","huawei","vivo","oppo" };
+	multiset<int> ms{ 1,2,3,4,5,6 };
+	ms.insert({ 7,8,9,10 });
+	ms.emplace(11);
+	for (auto it : ms) {
+		cout << it << " ";
+	}
+	/*multiset<string> ms{ "apple","xiaomi","huawei","vivo","oppo" };
 	for (auto&elem : ms) {
 		cout << elem << " ";
 	}
 	cout << endl;
 	for (auto it = ms.cbegin(); it != ms.cend(); it++) {
 		cout << *it << " ";
-	}
+	}*/
 	/*cout << "multiset:" << endl;
 	multiset<string> ms{ "B","C","A","A","A" };
 	for (auto&it : ms) {
@@ -22,10 +28,8 @@ void use_multiset() {
 */
 	/*set<Person, PersonSortCriterion> coll;
 	coll.insert(Person("jason", "lee"));
-	coll.insert(Person("Jack", "chen"));
+	coll.insert(Person("jack", "chen"));
 	coll.insert(Person("apple", "lee"));
-	Person p("K", "L");
-	cout << p << endl;
 
 	for (auto it = coll.begin(); it != coll.end(); it++) {
 		cout << *it << endl;
@@ -73,9 +77,25 @@ void use_multimap()
 		pair<int,string>(2,"jason"),
 		pair<int,string>(2,"joe"),
 		pair<int,string>(3,"stack"),
-		{5,"test" },{5,"test"},{5,"test"}
+		{5,"test" },{5,"test"},{5,"jason"}
 	};
 
+	mmp.insert(pair<int,string>(10,"hello"));
+
+	for (multimap<int, string>::iterator it = mmp.begin(); it != mmp.end();it++) {
+		cout << it->first << "," << it->second << endl;
+	}
+
+	mmp.erase(5);
+
+	for (multimap<int, string>::iterator it = mmp.begin(); it != mmp.end(); it++) {
+		cout << it->first << "," << it->second << endl;
+	}
+	/*map<int, float> m1;
+	map<int, int> m2;
+	if (m1 == m2) {
+
+	}*/
 }
 
 ostream &operator<<(ostream&out,const Person & p)
