@@ -66,6 +66,17 @@ void use_search_set()
 	cout << "ms.equal_range(3) :" << endl << *it2.first << " " << *it2.second << endl;
 }
 
+void use_multimap()
+{
+	multimap<int, string> mmp{ 
+		pair<int,string>(1,"jack"),
+		pair<int,string>(2,"jason"),
+		pair<int,string>(2,"joe"),
+		pair<int,string>(3,"stack")
+	};
+
+}
+
 ostream &operator<<(ostream&out,const Person & p)
 {
 	// TODO: insert return statement here

@@ -38,3 +38,6 @@ void use_multiset();
 
 // 展示set的查找函数的能力
 void use_search_set();
+
+// 本例是用来测试map和multimap的使用方法
+void use_multimap();
