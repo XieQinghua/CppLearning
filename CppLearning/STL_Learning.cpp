@@ -68,11 +68,12 @@ void use_search_set()
 
 void use_multimap()
 {
-	multimap<int, string> mmp{ 
+	multimap<int, string> mmp{
 		pair<int,string>(1,"jack"),
 		pair<int,string>(2,"jason"),
 		pair<int,string>(2,"joe"),
-		pair<int,string>(3,"stack")
+		pair<int,string>(3,"stack"),
+		{5,"test" },{5,"test"},{5,"test"}
 	};
 
 }
