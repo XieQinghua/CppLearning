@@ -12,6 +12,7 @@ public:
 	Person(string str1, string str2):firstname(str1),lastname(str2) {}
 	string firstname;
 	string lastname;
+	bool operator<(const Person&p) const;
 	friend ostream& operator<<(ostream&out, const Person & p);
 };
 
@@ -28,6 +29,26 @@ public:
 private:
 };
 
+class RT_CMP {
+public:
+	enum cmp_mode { normal, reverse };
+private:
+	cmp_mode mode;
+public:
+	RT_CMP(cmp_mode m = normal) :mode(m) {
+
+	}
+
+	template<class T>
+	bool operator()(const T&t1, const T&t2) const {
+		return mode == normal ? t1<t2
+			: t1>t2;
+	}
+
+	bool operator==(const RT_CMP&rc) const {
+		return mode == rc.mode;
+	}
+};
 
 class UseSet {
 public:
@@ -44,3 +65,6 @@ void use_multimap();
 
 // 本例是用来测试关联式容器的排序准则的
 void compare_map();
+
+// 本例是对RT_CMP的测试函数
+void use_RTCMP();

@@ -16,7 +16,7 @@
 using namespace std;
 void caluateSEofMatrix();
 int main() {
-	compare_map();
+	use_RTCMP();
 	cin.get();
 	return 0;
 }

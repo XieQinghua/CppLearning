@@ -100,19 +100,57 @@ void use_multimap()
 
 void compare_map()
 {
-	set<int, greater<int>> s{ 1,2,3,4,5,6 };
+	/*set<int, greater<int>> s{ 1,2,3,4,5,6 };
 
 	for (auto it = s.begin(); it != s.end(); it++) {
 		cout << *it << endl;
+	}*/
+
+	set<Person/*,PersonSortCriterion*/> ss{
+		Person("Jason","Lee"),
+		Person("Jack","Chen"),
+		Person("Alpha","Lee"),
+		Person("Alience","Steven"),
+		Person("Luffy","Lily")
+	};
+	for (auto&elem : ss) {
+		cout << elem << endl;
 	}
 
-	auto cmp = s.key_comp();
-
-	cout << cmp(1, 2) << endl;
-
-	map<int, int, greater<int>> mp{ {1,2},{2,4} };
-
 	//auto vcmp = mp.value_comp();
+}
+
+void use_RTCMP()
+{
+	set<int, RT_CMP> s1 = { 123,458,645,784,894 };
+	for (auto elem : s1) {
+		cout << elem << " ";
+	}
+	cout << endl;
+
+	// 指定降序排序规则
+	RT_CMP reverse_order(RT_CMP::reverse);
+	set<int, RT_CMP> s2(reverse_order);
+	s2 = { 123,458,645,784,894 };
+	for (auto elem : s2) {
+		cout << elem << " ";
+	}
+	cout << endl;
+
+	if (s1.key_comp() == s2.key_comp()) {
+		cout << "s1 and s2 have the same sorting criterion." << endl;
+	}
+	else {
+		cout << "s1 and s2 have a different sorting criterion." << endl;
+	}
+
+	s1 = s2;
+	if (s1.key_comp() == s2.key_comp()) {
+		cout << "s1 and s2 have the same sorting criterion." << endl;
+	}
+	else {
+		cout << "s1 and s2 have a different sorting criterion." << endl;
+	}
 }
 
 ostream &operator<<(ostream&out,const Person & p)
@@ -120,4 +158,10 @@ ostream &operator<<(ostream&out,const Person & p)
 	// TODO: insert return statement here
 	cout << p.firstname << " " << p.lastname;
 	return out;
+}
+
+bool Person::operator<(const Person & p) const
+{
+	return this->firstname < p.firstname ||
+		(this->firstname == p.firstname&&this->lastname < p.lastname);
 }
