@@ -1,7 +1,7 @@
 #include"STL_Learning.h"
 
 void use_multiset() {
-	multiset<int> ms{ 1,2,3,4,5,6 };
+	multiset<int,greater<int>> ms{ 1,2,3,4,5,6 };
 	ms.insert({ 7,8,9,10 });
 	ms.emplace(11);
 	for (auto it : ms) {
@@ -96,6 +96,23 @@ void use_multimap()
 	if (m1 == m2) {
 
 	}*/
+}
+
+void compare_map()
+{
+	set<int, greater<int>> s{ 1,2,3,4,5,6 };
+
+	for (auto it = s.begin(); it != s.end(); it++) {
+		cout << *it << endl;
+	}
+
+	auto cmp = s.key_comp();
+
+	cout << cmp(1, 2) << endl;
+
+	map<int, int, greater<int>> mp{ {1,2},{2,4} };
+
+	//auto vcmp = mp.value_comp();
 }
 
 ostream &operator<<(ostream&out,const Person & p)

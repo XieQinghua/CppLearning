@@ -41,3 +41,6 @@ void use_search_set();
 
 // 本例是用来测试map和multimap的使用方法
 void use_multimap();
+
+// 本例是用来测试关联式容器的排序准则的
+void compare_map();
