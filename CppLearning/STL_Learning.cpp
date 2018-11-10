@@ -153,6 +153,59 @@ void use_RTCMP()
 	}
 }
 
+void use_function_object()
+{
+	list<int> coll;
+	IntSequence fo(1);
+
+	generate_n<back_insert_iterator<list<int>>,int,IntSequence&>(
+		back_inserter(coll), 
+		5,
+		fo);
+
+	for (auto elem : coll) {
+		cout << elem << " ";
+	}
+	cout << endl;
+
+	generate_n(
+		back_inserter(coll),
+		5,
+		IntSequence(94));
+	for (auto elem : coll) {
+		cout << elem << " ";
+	}
+	cout << endl;
+
+	generate_n(
+		back_inserter(coll),
+		5,
+		fo);
+
+	for (auto elem : coll) {
+		cout << elem << " ";
+	}
+	cout << endl;
+
+	generate_n(
+		back_inserter(coll),
+		5,
+		fo);
+
+	for (auto elem : coll) {
+		cout << elem << " ";
+	}
+	cout << endl;
+}
+
+void use_for_each()
+{
+	vector<int> coll = { 1,2,3,4,5,6,7,8,9,10 };
+	MeanValue mv = for_each(coll.begin(), coll.end(), 
+							MeanValue());
+	cout << "mean value:" << mv.value() << endl;
+}
+
 ostream &operator<<(ostream&out,const Person & p)
 {
 	// TODO: insert return statement here

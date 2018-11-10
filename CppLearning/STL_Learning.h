@@ -3,7 +3,9 @@
 #include<vector>
 #include<set>
 #include<map>
+#include<list>
 #include<string>
+#include<algorithm>
 
 using namespace std;
 
@@ -68,3 +70,42 @@ void compare_map();
 
 // 本例是对RT_CMP的测试函数
 void use_RTCMP();
+
+
+class IntSequence {
+private:
+	int value;
+public:
+	IntSequence(int initialValue) :value(initialValue) {
+
+	}
+
+	int operator()() {
+		return ++value;
+	}
+};
+
+// 使用函数对象的例子
+void use_function_object();
+
+
+class MeanValue {
+private:
+	long num;
+	long sum;
+
+public:
+	MeanValue() :num(0), sum(0) {};
+
+	void operator()(int elem) {
+		++num;
+		sum += elem;
+	}
+
+	double value() {
+		return static_cast<double>(sum) / static_cast<double>(num);
+	}
+};
+
+// 使用for_each算法的例子
+void use_for_each();
