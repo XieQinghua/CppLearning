@@ -109,3 +109,19 @@ public:
 
 // 使用for_each算法的例子
 void use_for_each();
+
+class Nth {
+private:
+	int n;
+	int count;
+public:
+	Nth(int n) :n(n), count(0) {
+
+	}
+	bool operator()(int) {
+		return ++count == n;
+	}
+};
+
+// 使用判别式的例子
+void use_predicate();

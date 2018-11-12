@@ -16,7 +16,7 @@
 using namespace std;
 void caluateSEofMatrix();
 int main() {
-	use_for_each();
+	use_predicate();
 	cin.get();
 	return 0;
 }

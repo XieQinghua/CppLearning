@@ -206,6 +206,25 @@ void use_for_each()
 	cout << "mean value:" << mv.value() << endl;
 }
 
+void use_predicate()
+{
+	list<int> coll{ 1,2,3,4,5,6,7,8,9 };
+	cout << "coll:";
+	for (auto elem : coll) {
+		cout << elem << " ";
+	}
+	cout << endl;
+
+	auto pos = remove_if(coll.begin(), coll.end(), Nth(3));
+	coll.erase(pos,coll.end());
+
+	cout << "Removed:";
+	for (auto elem : coll) {
+		cout << elem << " ";
+	}
+	cout << endl;
+}
+
 ostream &operator<<(ostream&out,const Person & p)
 {
 	// TODO: insert return statement here
