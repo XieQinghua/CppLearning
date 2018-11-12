@@ -237,3 +237,13 @@ bool Person::operator<(const Person & p) const
 	return this->firstname < p.firstname ||
 		(this->firstname == p.firstname&&this->lastname < p.lastname);
 }
+
+class P {
+public:
+	P(int i) {
+		cout << i << endl;
+	}
+};
+void test_narrow() {
+	P p{ 1 };
+}

@@ -16,7 +16,7 @@
 using namespace std;
 void caluateSEofMatrix();
 int main() {
-	use_predicate();
+	test_narrow();
 	cin.get();
 	return 0;
 }

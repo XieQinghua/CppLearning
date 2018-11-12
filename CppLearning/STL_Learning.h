@@ -125,3 +125,5 @@ public:
 
 // 使用判别式的例子
 void use_predicate();
+
+void test_narrow();
