@@ -245,5 +245,5 @@ public:
 	}
 };
 void test_narrow() {
-	P p{ 1 };
+	
 }
