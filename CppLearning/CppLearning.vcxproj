@@ -69,7 +69,14 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>D:\OpenCV3.4.2\build\include\;D:\OpenCV3.4.2\build\include\opencv;D:\OpenCV3.4.2\build\include\opencv2\;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\OpenCV3.4.2\build\x64\vc15\lib\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>D:\OpenCV3.1\build\include\opencv;D:\OpenCV3.1\build\include\opencv2;D:\OpenCV3.1\build\include\;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\OpenCV3.1\build\x64\vc14\lib\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -88,6 +95,9 @@
       <AdditionalOptions>/D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link />
+    <Link>
+      <AdditionalDependencies>opencv_world342d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -111,16 +121,19 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opencv_world310.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CMain.c" />
     <ClCompile Include="examination.cpp" />
     <ClCompile Include="function.cpp" />
+    <ClCompile Include="OpenCV_LearNing.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="STL_Learning.cpp" />
     <ClCompile Include="test.cpp" />
@@ -128,6 +141,7 @@
     <ClCompile Include="WeiMing.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="OpenCV_LearNing.h" />
     <ClInclude Include="stdio.h" />
     <ClInclude Include="STL_Learning.h" />
     <ClInclude Include="test.h" />

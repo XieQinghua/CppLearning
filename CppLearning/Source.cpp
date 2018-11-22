@@ -12,11 +12,14 @@
 #include"util.h"
 #include"test.h"
 #include"STL_Learning.h"
+#include"OpenCV_LearNing.h"
 
 using namespace std;
+
 void caluateSEofMatrix();
+
 int main() {
-	test_narrow();
+	test_capture();
 	cin.get();
 	return 0;
 }
