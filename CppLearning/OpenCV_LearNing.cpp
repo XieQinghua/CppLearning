@@ -18,3 +18,8 @@ void test_capture()
 	}
 
 }
+
+void image_gradient()
+{
+
+}
